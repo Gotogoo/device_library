@@ -1,11 +1,11 @@
 class Device {
-  String id;
-  String name;
-  String screen;
-  String platform;
-  String version;
-  String storage;
-  String status;
+  String id; // "123e4567-e89b-12d3-a456-426655440000"
+  String name; // "iPhone 11 pro Max"
+  String screen; // "6.1-inches"
+  String platform; // "iOS"
+  String version; // "13.0"
+  String storage; // "64GB"
+  String status; // "AVAILABLE"
 
   Device(
       {this.id,

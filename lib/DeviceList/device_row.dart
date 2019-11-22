@@ -90,41 +90,10 @@ class DeviceRow extends StatelessWidget {
   }
 
   Widget _buildNameAndStatus() {
-    final bool isAvailable = device.status == "AVAILABLE";
-    final String statusDescription = isAvailable ? "可用" : "借出";
-    final Color statusColor = isAvailable
-        ? Color(int.parse("0xff4cd964"))
-        : Color(int.parse("0xffff9500"));
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Text(
-          device.name,
-          textAlign: TextAlign.left,
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: Color(int.parse("0xff333f48")),
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.fromLTRB(24, 2, 24, 2),
-          child: Text(
-            statusDescription,
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-          decoration: BoxDecoration(
-            color: statusColor,
-            borderRadius: BorderRadius.circular(4),
-          ),
-        ),
-      ],
-    );
+    final bool _isAvailable = device.status == "AVAILABLE";
+    final String _statusDescription = _isAvailable ? "可用" : "借出";
+    final Color _statusColor = _isAvailable ? Colors.lightGreen : Colors.orange;
+    return Text("");
   }
 
   Widget _buildSystem() {
