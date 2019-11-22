@@ -18,11 +18,12 @@ class DeviceListState extends State<DeviceList> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('设备列表'),
-      ),
-      body: Center(
+    // TODO: show app bar and body.
+    return Center();
+  }
+
+  Widget _buildBody() {
+    return Center(
         child: FutureBuilder<PlatformDevicesList>(
           future: deviceListings,
           builder: (context, snapshot) {
@@ -42,8 +43,7 @@ class DeviceListState extends State<DeviceList> {
             return CircularProgressIndicator();
           },
         ),
-      ),
-    );
+      );
   }
 
   Widget _buildDevices() {
