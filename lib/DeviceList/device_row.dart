@@ -138,21 +138,7 @@ class DeviceRow extends StatelessWidget {
   }
 
   Widget _buildHardware() {
-    return Row(
-      children: <Widget>[
-        ImageText(
-          image: "screen.png",
-          title: device.screen,
-        ),
-        Container(
-          margin: EdgeInsets.fromLTRB(16, 0, 0, 0),
-          child: ImageText(
-            image: "storage.png",
-            title: device.storage,
-          ),
-        ),
-      ],
-    );
+    return Text("");
   }
 
   Widget _buildID() {
