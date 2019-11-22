@@ -156,19 +156,8 @@ class DeviceRow extends StatelessWidget {
   }
 
   Widget _buildID() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: <Widget>[
-        Text(
-          "id: ${device.id}",
-          style: TextStyle(
-            fontSize: 10,
-            fontWeight: FontWeight.w500,
-            color: Color(int.parse("0xff333f48")),
-          ),
-        ),
-      ],
-    );
+    final Color _idTextColor = Color(int.parse("0xff333f48"));
+    return Text("");
   }
 }
 
