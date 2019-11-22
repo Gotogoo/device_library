@@ -6,6 +6,7 @@ class DeviceRow extends StatelessWidget {
 
   final Device device;
   final ValueChanged<Device> onTapItemAction;
+  final Color _textColor = Color(int.parse("0xff333f48"));
 
   @override
   Widget build(BuildContext context) {
@@ -127,14 +128,7 @@ class DeviceRow extends StatelessWidget {
   }
 
   Widget _buildSystem() {
-    return Text(
-      device.platform + " " + device.version,
-      style: TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w600,
-        color: Color(int.parse("0xff333f48")),
-      ),
-    );
+    return Text("");
   }
 
   Widget _buildHardware() {
@@ -142,7 +136,6 @@ class DeviceRow extends StatelessWidget {
   }
 
   Widget _buildID() {
-    final Color _idTextColor = Color(int.parse("0xff333f48"));
     return Text("");
   }
 }
